@@ -13,3 +13,4 @@
 12. [Basic Network](https://github.com/PhamKhahn/Tong-hop-Note/blob/master/Linux/doc/12.%20Basic%20Network)
 13. [NFS](https://github.com/PhamKhahn/Tong-hop-Note/blob/master/Linux/doc/13.%20NFS)
 14. [Security](https://github.com/PhamKhahn/Tong-hop-Note/blob/master/Linux/doc/14%20Security.md)
+15. [Text Command](https://github.com/PhamKhahn/Tong-hop-Note/blob/master/Linux/doc/15%20Text%20Command.md)
