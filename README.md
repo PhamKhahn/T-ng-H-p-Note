@@ -14,3 +14,5 @@
 13. [NFS](https://github.com/PhamKhahn/Tong-hop-Note/blob/master/Linux/doc/13.%20NFS)
 14. [Security](https://github.com/PhamKhahn/Tong-hop-Note/blob/master/Linux/doc/14%20Security.md)
 15. [Text Command](https://github.com/PhamKhahn/Tong-hop-Note/blob/master/Linux/doc/15%20Text%20Command.md)
+16. [Bash Programming](https://github.com/PhamKhahn/Tong-hop-Note/blob/master/Linux/doc/16%20Bash%20Programming.md)
+17. [Linux Cluster](https://github.com/PhamKhahn/Tong-hop-Note/blob/master/Linux/doc/17%20Linux%20Cluster.md)
