@@ -142,6 +142,7 @@ Lưu ý trên client cũng phải truyền đúng với giao thức như trên s
 •	*.* @IPserver:514 : Đối với giao thức UDP
 
 •	*.* @@IPserver:514 : Đối với giao thức TCP
+
 VD:
 •	*.* @66.0.0.199:514
 
