@@ -55,6 +55,8 @@ mail.=info	: Chỉ ghi log của mail khi mức cả báo là info vào trườn
 Cấu tạo folder /var/log trên Log Server
  
   ![IMG](https://github.com/PhamKhahn/Tong-hop-Note/blob/master/Log/3.%20Rsyslog%20v%C3%A0%20c%E1%BA%A5u%20h%C3%ACnh%20log%20t%E1%BA%ADp%20trung/img/4.png)
+
+  ![IMG](https://github.com/PhamKhahn/Tong-hop-Note/blob/master/Log/3.%20Rsyslog%20v%C3%A0%20c%E1%BA%A5u%20h%C3%ACnh%20log%20t%E1%BA%ADp%20trung/img/5.png)
  
 Cần đảm bảo tính an toàn (secure) : cần đàm bảo log đến đúng nơi nhận và không bị xem trộm
 
@@ -99,7 +101,7 @@ Chú ý : Module phải được load trước khi bất kỳ dòng config nào 
 
 	Viết các module ngay trên đầu file config
  
- ![IMG](https://github.com/PhamKhahn/Tong-hop-Note/blob/master/Log/3.%20Rsyslog%20v%C3%A0%20c%E1%BA%A5u%20h%C3%ACnh%20log%20t%E1%BA%ADp%20trung/img/5.png)
+  ![IMG](https://github.com/PhamKhahn/Tong-hop-Note/blob/master/Log/3.%20Rsyslog%20v%C3%A0%20c%E1%BA%A5u%20h%C3%ACnh%20log%20t%E1%BA%ADp%20trung/img/6.png)
 
 Dòng cuối cùng -> cấu hình log client vào folder chỉ định
 
@@ -132,7 +134,7 @@ Sau đó restart lại rsyslog
 
 	sử dụng netstat để check
 
-  ![IMG](https://github.com/PhamKhahn/Tong-hop-Note/blob/master/Log/3.%20Rsyslog%20v%C3%A0%20c%E1%BA%A5u%20h%C3%ACnh%20log%20t%E1%BA%ADp%20trung/img/6.png)
+ ![IMG](https://github.com/PhamKhahn/Tong-hop-Note/blob/master/Log/3.%20Rsyslog%20v%C3%A0%20c%E1%BA%A5u%20h%C3%ACnh%20log%20t%E1%BA%ADp%20trung/img/7.png)
 
 ### 5.2.2 Client
 Lưu ý trên client cũng phải truyền đúng với giao thức như trên server:
@@ -148,11 +150,11 @@ VD:
 
 Ubuntu
 
- ![IMG](https://github.com/PhamKhahn/Tong-hop-Note/blob/master/Log/3.%20Rsyslog%20v%C3%A0%20c%E1%BA%A5u%20h%C3%ACnh%20log%20t%E1%BA%ADp%20trung/img/7.png)
+  ![IMG](https://github.com/PhamKhahn/Tong-hop-Note/blob/master/Log/3.%20Rsyslog%20v%C3%A0%20c%E1%BA%A5u%20h%C3%ACnh%20log%20t%E1%BA%ADp%20trung/img/8.png)
 
 CentOs7
  
-  ![IMG](https://github.com/PhamKhahn/Tong-hop-Note/blob/master/Log/3.%20Rsyslog%20v%C3%A0%20c%E1%BA%A5u%20h%C3%ACnh%20log%20t%E1%BA%ADp%20trung/img/8.png)
+  ![IMG](https://github.com/PhamKhahn/Tong-hop-Note/blob/master/Log/3.%20Rsyslog%20v%C3%A0%20c%E1%BA%A5u%20h%C3%ACnh%20log%20t%E1%BA%ADp%20trung/img/8.1.png)
 
 Note: Chú ý nếu đổi qua lại giữa UDP,TCP thì cần chú ý xem process cũ còn chạy không thì phải kill đi (và reboot lại máy - nếu service restart rồi vẫn không gửi log) rồi mới reload/restart lại rsyslog
 
