@@ -15,9 +15,12 @@ echo "======================APACHE DONE====================="
 
 #MariaDB
 
+
 yum install -y mariadb-server mariadb
 
 systemctl start mariadb
+
+echo "CHU Y: KHONG DAT PASS CHO ROOT -> CHAY MYSQL TU DONG"
 
 sudo mysql_secure_installation
 
