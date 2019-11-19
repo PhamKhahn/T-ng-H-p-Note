@@ -1,4 +1,4 @@
-# ĐẨY LOG APACHE VỀ LOG SERVER
+# ĐẨY LOG APACHE VÀ MARIADB VỀ LOG SERVER
  Trên thực tế, hệ thống chỉ là môi trường,ta sẽ còn cài đặt thêm các ứng dụng khác nhằm phục vụ mục đích nào đó (database, webserver, ....). Đây mới là mục đích chính của ta
 
 -> Cần theo dõi log của chúng để đảm bảo chúng chạy bình thường ổn định và khi cần ta có thể truy vết, xử lý sự cố
@@ -52,7 +52,7 @@ https://www.rsyslog.com/doc/v8-stable/configuration/modules/imfile.html
     - Tag
     - Facility
     - Severity
-## 1.3 Cấu hình
+## 1.3 Cấu hình apache
 Tạo file /etc/rsyslog.d/apache.conf có nội dung như sau: 
 
 
@@ -75,4 +75,21 @@ Tạo file /etc/rsyslog.d/apache.conf có nội dung như sau:
            Tag="error_log"
            Severity="info"
            Facility="local6")
+
+## 1.4 Cấu hình mariadb
+(máy client đã cài mariadb-server)
+
+Tương tự apache
+
+Tạo file /etc/rsyslog.d/mariadb.conf có nội dung như sau:
+
+    module(load="imfile")
+
+    #Mariadb
+    input(  type="imfile"
+            File="/var/log/mariadb/mariadb.log"
+            Tag="Mariadb_Log"
+            Severity="info"
+            Facility="local1"
+)
 
