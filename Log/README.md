@@ -9,4 +9,4 @@
 
 ## [5. Config log tập trung Rsyslog](https://github.com/PhamKhahn/Tong-hop-Note/blob/master/Log/3.%20Rsyslog%20v%C3%A0%20c%E1%BA%A5u%20h%C3%ACnh%20log%20t%E1%BA%ADp%20trung/doc/Rsyslog.md)
 
-## [6. Config log apache tập trung Rsyslog](https://github.com/PhamKhahn/Tong-hop-Note/blob/master/Log/3.%20Rsyslog%20v%C3%A0%20c%E1%BA%A5u%20h%C3%ACnh%20log%20t%E1%BA%ADp%20trung/doc/Log%20Apache-%20Rsyslog.md)
+## [6. Config log apache và mariadb tập trung Rsyslog](https://github.com/PhamKhahn/Tong-hop-Note/blob/master/Log/3.%20Rsyslog%20v%C3%A0%20c%E1%BA%A5u%20h%C3%ACnh%20log%20t%E1%BA%ADp%20trung/doc/Log%20Apache-%20Rsyslog.md)
