@@ -52,7 +52,7 @@ https://www.rsyslog.com/doc/v8-stable/configuration/modules/imfile.html
     - Tag
     - Facility
     - Severity
-## 1.3 Cấu hình apache
+## 1.3 Cấu hình đẩy log apache
 Tạo file /etc/rsyslog.d/apache.conf có nội dung như sau: 
 
 
@@ -76,7 +76,24 @@ Tạo file /etc/rsyslog.d/apache.conf có nội dung như sau:
            Severity="info"
            Facility="local6")
 
-## 1.4 Cấu hình mariadb
+## 1.4 Cấu hình đẩy log ssh
+
+
+Tương tự apache
+
+Tạo file /etc/rsyslog.d/secure.conf có nội dung như sau:
+
+    module(load="imfile")
+    #/var/log/secure
+    input(type="imfile"
+            File="/var/log/secure"
+            Tag="Log_SSH"
+            Severity="info"
+            Facility="local2"
+    )
+
+
+## 1.5 Cấu hình đẩy log mariadb
 (máy client đã cài mariadb-server)
 
 Tương tự apache
