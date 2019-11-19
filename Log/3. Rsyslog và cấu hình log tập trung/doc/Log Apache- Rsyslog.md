@@ -52,4 +52,27 @@ https://www.rsyslog.com/doc/v8-stable/configuration/modules/imfile.html
     - Tag
     - Facility
     - Severity
-    
+## 1.3 Cấu hình
+Tạo file /etc/rsyslog.d/apache.conf có nội dung như sau: 
+
+
+    module(load="imfile" PollingInterval="10")
+
+    #access_log
+
+    input(  type="imfile"
+   
+           File="/var/log/httpd/access_log"
+           Tag="access_log"
+           Severity="info"
+           Facility="local7")
+
+    #error_log
+
+    input(  type="imfile"
+   
+           File="/var/log/httpd/error_log"
+           Tag="error_log"
+           Severity="info"
+           Facility="local6")
+
