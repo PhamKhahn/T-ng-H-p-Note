@@ -23,13 +23,13 @@ Khi rsyslogd bị dừng trong quá trình monitor 1 text file. Nó sẽ ghi l�
 ## 1.2 Các Parameter 
 1 MODULE chứa các PARAMETER
 
-1 PARAMETER chứa các "OPTION" đi kèm
+1 PARAMETER chứa các "OPTION"/"BIẾN" đi kèm
 
-Tùy vào mục đích cấu hình mà ta chọn/bỏ đi các OPTION này.
+Tùy vào mục đích cấu hình mà ta bỏ đi các OPTION/BIẾN hoặc chọn và áp giá trị cho chúng.
 
 Chú ý: 
 
-+) Chỉ sử dụng các OPTION cần thiết,  tránh việc cấu hình quá nhiều, rườm rà không cần thiết.
++) Chỉ sử dụng các OPTION/BIẾN cần thiết,  tránh việc cấu hình quá nhiều, rườm rà không cần thiết.
 
 +) Các Parameter không phân biệt hoa thường
 
@@ -39,12 +39,13 @@ https://www.rsyslog.com/doc/v8-stable/configuration/modules/imfile.html
 (+) Module Parameters
 
     - Mode :
-    chỉ định mode là inotify (được khuyến nghị)  hay polling (mặc định của imfile; tốn tài nguyên và chậm hơn)
+    chỉ định mode là inotify (được khuyến nghị - mặc định)  hay polling (mặc định của imfile; tốn tài nguyên và chậm hơn)
 
     Note: nếu ta sử dụng $ModLoad thì polling sẽ là mặc định -> giúp ngăn xung đột với cấu hình cũ.
 
-    - PollingInterval
-    - 
+    - PollingInterval ( chỉ định tần suất ghi dữ liệu mới) -> chỉ chạy ở polling -> tốn tài nguyên
+    
+    Nên dùng inotify
 
 (+) Input Parameters
 
