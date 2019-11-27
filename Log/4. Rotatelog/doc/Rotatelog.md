@@ -40,7 +40,7 @@ folder :	/etc/logrotate.d
 ![img3](https://github.com/PhamKhahn/Tong-hop-Note/blob/master/Log/4.%20Rotatelog/img/3.png)
 
     Các file log được rotate hàng tuần
-    Dữ liệu logs được lưu lại trong 4 file
+    Dữ liệu logs được lưu lại trong 4 file <=> lưu log cũ trong 4 tuần
     file log mới được tạo sau khi quá trình rotating các file cũ
     Các file log cũ được gán date ở phía sau tên
 

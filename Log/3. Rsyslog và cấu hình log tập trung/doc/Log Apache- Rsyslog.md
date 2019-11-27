@@ -1,4 +1,4 @@
-# ĐẨY LOG APACHE VỀ LOG SERVER
+# ĐẨY LOG APACHE VÀ MARIADB VỀ LOG SERVER
  Trên thực tế, hệ thống chỉ là môi trường,ta sẽ còn cài đặt thêm các ứng dụng khác nhằm phục vụ mục đích nào đó (database, webserver, ....). Đây mới là mục đích chính của ta
 
 -> Cần theo dõi log của chúng để đảm bảo chúng chạy bình thường ổn định và khi cần ta có thể truy vết, xử lý sự cố
@@ -23,13 +23,13 @@ Khi rsyslogd bị dừng trong quá trình monitor 1 text file. Nó sẽ ghi l�
 ## 1.2 Các Parameter 
 1 MODULE chứa các PARAMETER
 
-1 PARAMETER chứa các "OPTION" đi kèm
+1 PARAMETER chứa các "OPTION"/"BIẾN" đi kèm
 
-Tùy vào mục đích cấu hình mà ta chọn/bỏ đi các OPTION này.
+Tùy vào mục đích cấu hình mà ta bỏ đi các OPTION/BIẾN hoặc chọn và áp giá trị cho chúng.
 
 Chú ý: 
 
-+) Chỉ sử dụng các OPTION cần thiết,  tránh việc cấu hình quá nhiều, rườm rà không cần thiết.
++) Chỉ sử dụng các OPTION/BIẾN cần thiết,  tránh việc cấu hình quá nhiều, rườm rà không cần thiết.
 
 +) Các Parameter không phân biệt hoa thường
 
@@ -39,12 +39,13 @@ https://www.rsyslog.com/doc/v8-stable/configuration/modules/imfile.html
 (+) Module Parameters
 
     - Mode :
-    chỉ định mode là inotify (được khuyến nghị)  hay polling (mặc định của imfile; tốn tài nguyên và chậm hơn)
+    chỉ định mode là inotify (được khuyến nghị - mặc định)  hay polling (mặc định của imfile; tốn tài nguyên và chậm hơn)
 
     Note: nếu ta sử dụng $ModLoad thì polling sẽ là mặc định -> giúp ngăn xung đột với cấu hình cũ.
 
-    - PollingInterval
-    - 
+    - PollingInterval ( chỉ định tần suất ghi dữ liệu mới) -> chỉ chạy ở polling -> tốn tài nguyên
+    
+    Nên dùng inotify
 
 (+) Input Parameters
 
@@ -52,4 +53,61 @@ https://www.rsyslog.com/doc/v8-stable/configuration/modules/imfile.html
     - Tag
     - Facility
     - Severity
-    
+## 1.3 Cấu hình đẩy log apache
+Tạo file /etc/rsyslog.d/apache.conf có nội dung như sau: 
+
+
+    module(load="imfile" PollingInterval="10")
+
+    #access_log
+
+    input(  type="imfile"
+   
+           File="/var/log/httpd/access_log"
+           Tag="access_log"
+           Severity="info"
+           Facility="local7")
+
+    #error_log
+
+    input(  type="imfile"
+   
+           File="/var/log/httpd/error_log"
+           Tag="error_log"
+           Severity="info"
+           Facility="local6")
+
+## 1.4 Cấu hình đẩy log ssh
+
+
+Tương tự apache
+
+Tạo file /etc/rsyslog.d/secure.conf có nội dung như sau:
+
+    module(load="imfile")
+    #/var/log/secure
+    input(type="imfile"
+            File="/var/log/secure"
+            Tag="Log_SSH"
+            Severity="info"
+            Facility="local2"
+    )
+
+
+## 1.5 Cấu hình đẩy log mariadb
+(máy client đã cài mariadb-server)
+
+Tương tự apache
+
+Tạo file /etc/rsyslog.d/mariadb.conf có nội dung như sau:
+
+    module(load="imfile")
+
+    #Mariadb
+    input(  type="imfile"
+            File="/var/log/mariadb/mariadb.log"
+            Tag="Mariadb_Log"
+            Severity="info"
+            Facility="local1"
+)
+
