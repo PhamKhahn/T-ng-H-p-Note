@@ -4,3 +4,4 @@
 ## 4.[Collect messages](https://github.com/PhamKhahn/Tong-hop-Note/blob/master/Log/5.%20%20Graylog/L%C3%BD%20thuy%E1%BA%BFt/doc/4.%20Collect%20messages.md)
 ## 5.[Lưu ý trước khi cài đặt](https://github.com/PhamKhahn/Tong-hop-Note/blob/master/Log/5.%20%20Graylog/L%C3%BD%20thuy%E1%BA%BFt/doc/5.Ch%C3%BA%20%C3%BD%20khi%20c%C3%A0i%20%C4%91%E1%BA%B7t.md)
 ## 6.[Hướng dẫn cài đặt Graylog 3.1](https://github.com/PhamKhahn/Tong-hop-Note/blob/master/Log/5.%20%20Graylog/L%C3%BD%20thuy%E1%BA%BFt/doc/6.C%C3%A0i%20%C4%91%E1%BA%B7t%20Graylog%20tr%C3%AAn%20CentOs7.md)
+## 7.[Streams](https://github.com/PhamKhahn/Tong-hop-Note/blob/master/Log/5.%20%20Graylog/L%C3%BD%20thuy%E1%BA%BFt/doc/7.%20Streams.md)
