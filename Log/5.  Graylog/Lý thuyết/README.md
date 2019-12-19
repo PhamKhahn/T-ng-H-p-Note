@@ -17,3 +17,4 @@
 ## 14.[Alert](https://github.com/PhamKhahn/Tong-hop-Note/blob/master/Log/5.%20%20Graylog/L%C3%BD%20thuy%E1%BA%BFt/doc/14.%20Alert.md)
 ## 14.1.[Alert Gmail](https://github.com/PhamKhahn/Tong-hop-Note/blob/master/Log/5.%20%20Graylog/L%C3%BD%20thuy%E1%BA%BFt/doc/14.1.Alert_Email.md)
 ## 14.2.[Alert Telegram](https://github.com/PhamKhahn/Tong-hop-Note/blob/master/Log/5.%20%20Graylog/L%C3%BD%20thuy%E1%BA%BFt/doc/14.2.Alert_TELEGRAM.md)
+## 14.3.[Alert Slack](https://github.com/PhamKhahn/Tong-hop-Note/blob/master/Log/5.%20%20Graylog/L%C3%BD%20thuy%E1%BA%BFt/doc/14.3.Alert_SLACK.md)
