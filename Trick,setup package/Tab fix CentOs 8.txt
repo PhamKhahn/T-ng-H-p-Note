@@ -1,0 +1,10 @@
+B1:
+sudo yum install bash-completion
+
+hoac
+
+sudo dnf install bash-completion
+
+B2:
+
+source /etc/profile.d/bash_completion.sh
